@@ -10,7 +10,6 @@ import { useToast } from "@/hooks/use-toast";
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [showMoreProjects, setShowMoreProjects] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -296,16 +295,16 @@ const Portfolio = () => {
                   live: "https://defi-router-website-demo.netlify.app/"
                 },
                 {
-                  title: "Shopping Website",
-                  description: "Responsive e-commerce site with cart & authentication",
+                  title: "Published IEEE Paper: Energy Efficient Hybrid Buoy",
+                  description: "Presented and published a research paper focusing on sustainable ocean energy harvesting using hybrid buoy design",
                   github: "https://github.com/DixDev1621",
-                  live: "#"
+                  live: "https://drive.google.com/file/d/12MdgrvNZTISbx9Z7NYp71BgSazGf7drz/view?usp=sharing"
                 },
                 {
                   title: "Smart Waste Management System",
                   description: "IoT system using Arduino + ultrasonic sensors for waste detection",
                   github: "https://github.com/DixDev1621",
-                  live: "#"
+                  live: "https://github.com/DixDev1621/waste_project"
                 }
               ].map((project) => (
                 <Card key={project.title} className="hover:shadow-lg transition-shadow">
@@ -333,27 +332,6 @@ const Portfolio = () => {
               ))}
             </div>
 
-            <div className="text-center">
-              <Button
-                variant="outline"
-                onClick={() => setShowMoreProjects(!showMoreProjects)}
-              >
-                {showMoreProjects ? "Hide" : "Show"} More Projects
-              </Button>
-              
-              {showMoreProjects && (
-                <div className="mt-6 animate-fade-in">
-                  <Card>
-                    <CardContent className="pt-6">
-                      <ul className="space-y-2 text-left">
-                        <li className="text-muted-foreground">• ML-Based Waste Management Mini Project</li>
-                        <li className="text-muted-foreground">• Published IEEE Paper: "Energy Efficient Hybrid Buoy"</li>
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </div>
-              )}
-            </div>
           </div>
         </div>
       </section>
@@ -366,16 +344,55 @@ const Portfolio = () => {
             
             <div className="grid gap-4">
               {[
-                { title: "1st Place – Debate Competition", org: "Sai Ram Engineering College (Gridex 8.0)" },
-                { title: "3rd Place – App Expo", org: "Theme: Crypto (Blockchain & DeFi)" },
-                { title: "Full Stack Web Development", org: "GUVI (6 months)" },
-                { title: "IEEE Publication", org: "Energy Efficient Hybrid Buoy - DELCON 2025 IEEE Conference" }
+                { 
+                  title: "1st Place – Debate Competition", 
+                  org: "Sai Ram Engineering College (Gridex 8.0)",
+                  link: "https://drive.google.com/file/d/1pvaC_BQVJmnAnvgLGDqRiQuf1k7dUSel/view?usp=sharing"
+                },
+                { 
+                  title: "3rd Place – App Expo", 
+                  org: "Theme: Crypto (Blockchain & DeFi)",
+                  link: "https://drive.google.com/file/d/16vmAAtCSbV-WOVuPv6PgWC9d_S8uaj3f/view?usp=sharing"
+                },
+                { 
+                  title: "Full Stack Web Development", 
+                  org: "GUVI (6 months)",
+                  link: "https://drive.google.com/file/d/1ifwFc7oclS6tWlVuL0yIG_HigbbKs2dF/view?usp=sharing"
+                },
+                { 
+                  title: "IEEE Publication", 
+                  org: "Energy Efficient Hybrid Buoy - DELCON 2025 IEEE Conference",
+                  link: "https://drive.google.com/file/d/12MdgrvNZTISbx9Z7NYp71BgSazGf7drz/view?usp=sharing"
+                },
+                { 
+                  title: "Hackathon - VIT Chennai", 
+                  org: "Top 10 Finalist out of 180 teams",
+                  link: "https://drive.google.com/file/d/1su-vOUWW0d-7RFncIfaSOjeZqJxZ0lXy/view?usp=sharing"
+                },
+                { 
+                  title: "DRESTEIN'25 Poster Presentation", 
+                  org: "3rd Place - Saveetha Engineering College",
+                  link: "https://drive.google.com/file/d/19KYMLq7Up5oNlmizTm0rBrgq_esWdQPo/view?usp=sharing"
+                },
+                { 
+                  title: "2nd - Multiverse Pitch", 
+                  org: "Sai Ram Engineering College (AIRO 5.0)",
+                  link: "https://drive.google.com/file/d/1q6zO7BALntY47nrObApTR3MlJ_r3cosw/view?usp=sharing"
+                }
               ].map((cert) => (
                 <Card key={cert.title}>
                   <CardHeader>
                     <CardTitle className="text-lg">{cert.title}</CardTitle>
                     <CardDescription>{cert.org}</CardDescription>
                   </CardHeader>
+                  <CardContent>
+                    <Button size="sm" variant="outline" asChild>
+                      <a href={cert.link} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        View Certificate
+                      </a>
+                    </Button>
+                  </CardContent>
                 </Card>
               ))}
             </div>
