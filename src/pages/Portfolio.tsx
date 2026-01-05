@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Github, Linkedin, Mail, ExternalLink, Download, Home, Menu, X } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink, Download, Menu, X } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
 import { useToast } from "@/hooks/use-toast";
 
@@ -74,7 +74,7 @@ const Portfolio = () => {
                   {item.label}
                 </button>
               ))}
-              <div className="flex items-center space-x-3 ml-4 pl-4 border-l border-border">
+            <div className="flex items-center space-x-3 ml-4 pl-4 border-l border-border">
                 <a
                   href="https://www.linkedin.com/in/dixun-devotta-s"
                   target="_blank"
@@ -92,13 +92,6 @@ const Portfolio = () => {
                   aria-label="GitHub"
                 >
                   <Github className="h-5 w-5" />
-                </a>
-                <a
-                  href="/"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                  aria-label="Portfolio"
-                >
-                  <Home className="h-5 w-5" />
                 </a>
               </div>
               <Button size="sm" asChild>
@@ -149,9 +142,6 @@ const Portfolio = () => {
                   >
                     <Github className="h-5 w-5" />
                   </a>
-                  <a href="/" className="text-muted-foreground hover:text-primary transition-colors">
-                    <Home className="h-5 w-5" />
-                  </a>
                 </div>
                 <Button size="sm" className="mx-4" asChild>
                   <a href="/resume.pdf" download>
@@ -173,9 +163,39 @@ const Portfolio = () => {
               <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
                 DIXUN DEVOTTA S
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8">
+              <p className="text-xl md:text-2xl text-muted-foreground mb-6">
                 Aspiring Full Stack Web Developer | B.E. Electronics and Communication Engineering Student
               </p>
+              
+              {/* Social Links */}
+              <div className="flex items-center gap-4 justify-center md:justify-start mb-8">
+                <a
+                  href="https://www.linkedin.com/in/dixun-devotta-s"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                >
+                  <Linkedin className="h-6 w-6" />
+                  <span className="text-sm font-medium">LinkedIn</span>
+                </a>
+                <a
+                  href="https://github.com/DixDev1621"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                >
+                  <Github className="h-6 w-6" />
+                  <span className="text-sm font-medium">GitHub</span>
+                </a>
+                <a
+                  href="mailto:dixundevotta.s@gmail.com"
+                  className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                >
+                  <Mail className="h-6 w-6" />
+                  <span className="text-sm font-medium">Email</span>
+                </a>
+              </div>
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <Button size="lg" onClick={() => scrollToSection("projects")}>
                   View Projects
@@ -224,10 +244,6 @@ const Portfolio = () => {
                   <a href="https://github.com/DixDev1621" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary hover:underline">
                     <Github className="h-5 w-5" />
                     GitHub
-                  </a>
-                  <a href="/" className="flex items-center gap-2 text-primary hover:underline">
-                    <Home className="h-5 w-5" />
-                    Portfolio
                   </a>
                 </div>
               </CardContent>
@@ -286,52 +302,83 @@ const Portfolio = () => {
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Projects</h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-              {[
-                {
-                  title: "Blockchain Router",
-                  description: "Decentralized router concept using blockchain for secure data transfer",
-                  github: "https://github.com/DixDev1621",
-                  live: "https://defi-router-website-demo.netlify.app/"
-                },
-                {
-                  title: "Published IEEE Paper: Energy Efficient Hybrid Buoy",
-                  description: "Presented and published a research paper focusing on sustainable ocean energy harvesting using hybrid buoy design",
-                  github: "https://github.com/DixDev1621",
-                  live: "https://drive.google.com/file/d/12MdgrvNZTISbx9Z7NYp71BgSazGf7drz/view?usp=sharing"
-                },
-                {
-                  title: "Smart Waste Management System",
-                  description: "IoT system using Arduino + ultrasonic sensors for waste detection",
-                  github: "https://github.com/DixDev1621",
-                  live: "https://github.com/DixDev1621/waste_project"
-                }
-              ].map((project) => (
-                <Card key={project.title} className="hover:shadow-lg transition-shadow">
-                  <CardHeader>
-                    <CardTitle>{project.title}</CardTitle>
-                    <CardDescription>{project.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex gap-2">
-                      <Button size="sm" variant="outline" asChild>
-                        <a href={project.github} target="_blank" rel="noopener noreferrer">
-                          <Github className="h-4 w-4 mr-2" />
-                          GitHub
-                        </a>
-                      </Button>
-                      <Button size="sm" asChild>
-                        <a href={project.live} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="h-4 w-4 mr-2" />
-                          Live Preview
-                        </a>
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Blockchain Router */}
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle>Blockchain Router</CardTitle>
+                  <div className="flex flex-wrap gap-1 mt-2">
+                    {["React", "Node.js", "Express", "MongoDB", "Blockchain"].map((tech) => (
+                      <Badge key={tech} variant="secondary" className="text-xs">{tech}</Badge>
+                    ))}
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Built a decentralized router system to securely transfer data and prevent network manipulation. Implemented backend APIs, authentication, and blockchain-based verification.
+                  </p>
+                  <div className="flex gap-2">
+                    <Button size="sm" asChild>
+                      <a href="https://defi-router-website-demo.netlify.app/" target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        Live Demo
+                      </a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
 
+              {/* Smart Waste Management System */}
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle>Smart Waste Management System</CardTitle>
+                  <div className="flex flex-wrap gap-1 mt-2">
+                    {["Node.js", "Express", "MongoDB", "Arduino", "IoT"].map((tech) => (
+                      <Badge key={tech} variant="secondary" className="text-xs">{tech}</Badge>
+                    ))}
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    Developed an AI-based smart waste segregation system using computer vision, deep learning, and Arduino-controlled hardware to automatically classify and segregate waste in real time.
+                  </p>
+                  <p className="text-xs text-muted-foreground italic mb-4">Note: Local Server | Hardware-Based System</p>
+                  <div className="flex gap-2">
+                    <Button size="sm" variant="outline" asChild>
+                      <a href="https://github.com/DixDev1621/waste_project" target="_blank" rel="noopener noreferrer">
+                        <Github className="h-4 w-4 mr-2" />
+                        Source Code
+                      </a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Water Tracking Web Application */}
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle>Water Tracking Web Application</CardTitle>
+                  <div className="flex flex-wrap gap-1 mt-2">
+                    {["React.js", "TypeScript", "Tailwind CSS", "Supabase", "Vite"].map((tech) => (
+                      <Badge key={tech} variant="secondary" className="text-xs">{tech}</Badge>
+                    ))}
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Developed a water intake tracking web application that enables users to efficiently monitor and manage daily drinking water consumption.
+                  </p>
+                  <div className="flex gap-2">
+                    <Button size="sm" asChild>
+                      <a href="https://starlit-gecko-9af8d7.netlify.app/" target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        Live Demo
+                      </a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
@@ -448,12 +495,6 @@ const Portfolio = () => {
                       GitHub
                     </a>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <Home className="h-5 w-5 text-primary" />
-                    <a href="/" className="text-muted-foreground hover:text-primary">
-                      Portfolio
-                    </a>
-                  </div>
                 </CardContent>
               </Card>
 
@@ -500,9 +541,6 @@ const Portfolio = () => {
               </a>
               <a href="https://github.com/DixDev1621" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
                 <Github className="h-5 w-5" />
-              </a>
-              <a href="/" className="text-muted-foreground hover:text-primary">
-                <Home className="h-5 w-5" />
               </a>
             </div>
             <Button size="sm" variant="outline" asChild>
