@@ -319,9 +319,15 @@ const Portfolio = () => {
                   </p>
                   <div className="flex gap-2">
                     <Button size="sm" asChild>
-                      <a href="https://dixdev1621.github.io/defi-router-frontend/" target="_blank" rel="noopener noreferrer">
+                      <a href="https://dixdev1621.github.io/defi-router/" target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-4 w-4 mr-2" />
                         Live Demo
+                      </a>
+                    </Button>
+                    <Button size="sm" variant="outline" asChild>
+                      <a href="https://github.com/DixDev1621/Blockhain-DeFi-.git" target="_blank" rel="noopener noreferrer">
+                        <Github className="h-4 w-4 mr-2" />
+                        Source Code
                       </a>
                     </Button>
                   </div>
@@ -345,7 +351,7 @@ const Portfolio = () => {
                   <p className="text-xs text-muted-foreground italic mb-4">Note: Local Server | Hardware-Based System</p>
                   <div className="flex gap-2">
                     <Button size="sm" variant="outline" asChild>
-                      <a href="https://github.com/DixDev1621/waste_project/tree/main/web_app" target="_blank" rel="noopener noreferrer">
+                      <a href="https://github.com/DixDev1621/waste_project.git" target="_blank" rel="noopener noreferrer">
                         <Github className="h-4 w-4 mr-2" />
                         Source Code
                       </a>
@@ -373,6 +379,12 @@ const Portfolio = () => {
                       <a href="https://starlit-gecko-9af8d7.netlify.app/" target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-4 w-4 mr-2" />
                         Live Demo
+                      </a>
+                    </Button>
+                    <Button size="sm" variant="outline" asChild>
+                      <a href="https://github.com/DixDev1621/saveit-comedy-coach.git" target="_blank" rel="noopener noreferrer">
+                        <Github className="h-4 w-4 mr-2" />
+                        Source Code
                       </a>
                     </Button>
                   </div>
