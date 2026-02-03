@@ -404,6 +404,11 @@ const Portfolio = () => {
             <div className="grid gap-4">
               {[
                 { 
+                  title: "Smart India Hackathon 2025 – Winner", 
+                  org: "National-level winner for Fog Magnet – Fog-to-Water Conversion Hardware",
+                  link: "/certificates/sih-2025-winner.jpeg"
+                },
+                { 
                   title: "1st Place – Debate Competition", 
                   org: "Sai Ram Engineering College (Gridex 8.0)",
                   link: "https://drive.google.com/file/d/1pvaC_BQVJmnAnvgLGDqRiQuf1k7dUSel/view?usp=sharing"
