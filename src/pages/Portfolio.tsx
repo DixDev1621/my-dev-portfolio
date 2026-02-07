@@ -94,12 +94,6 @@ const Portfolio = () => {
                   <Github className="h-5 w-5" />
                 </a>
               </div>
-              <Button size="sm" asChild>
-                <a href="/resume.pdf" download>
-                  <Download className="h-4 w-4 mr-2" />
-                  Resume
-                </a>
-              </Button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -143,12 +137,6 @@ const Portfolio = () => {
                     <Github className="h-5 w-5" />
                   </a>
                 </div>
-                <Button size="sm" className="mx-4" asChild>
-                  <a href="/resume.pdf" download>
-                    <Download className="h-4 w-4 mr-2" />
-                    Download Resume
-                  </a>
-                </Button>
               </div>
             </div>
           )}
