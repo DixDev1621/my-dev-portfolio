@@ -306,18 +306,21 @@ const Portfolio = () => {
               {/* Blockchain Router */}
               <Card className="hover:shadow-lg transition-shadow">
                 <CardHeader>
-                  <CardTitle>Blockchain Router</CardTitle>
+                  <div className="flex items-center gap-2 mb-1">
+                    <CardTitle>Blockchain Router</CardTitle>
+                    <Badge className="text-xs">Full-Stack MERN</Badge>
+                  </div>
                   <div className="flex flex-wrap gap-1 mt-2">
-                    {["React", "Node.js", "Express", "MongoDB", "Blockchain"].map((tech) => (
+                    {["MongoDB", "Express.js", "React.js", "Node.js", "Blockchain"].map((tech) => (
                       <Badge key={tech} variant="secondary" className="text-xs">{tech}</Badge>
                     ))}
                   </div>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Built a decentralized router system to securely transfer data and prevent network manipulation. Implemented backend APIs, authentication, and blockchain-based verification.
+                    Built a full-stack MERN application for a decentralized blockchain router to securely transfer data and prevent network manipulation. Developed a React-based frontend, implemented Node.js and Express REST APIs, used MongoDB for data storage, and integrated authentication and blockchain-based verification for secure communication.
                   </p>
-                  <div className="flex gap-2">
+                  <div className="flex flex-wrap gap-2">
                     <Button size="sm" asChild>
                       <a href="https://dixdev1621.github.io/defi-router/" target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-4 w-4 mr-2" />
@@ -325,9 +328,15 @@ const Portfolio = () => {
                       </a>
                     </Button>
                     <Button size="sm" variant="outline" asChild>
-                      <a href="https://github.com/DixDev1621/Blockhain-DeFi-.git" target="_blank" rel="noopener noreferrer">
+                      <a href="https://github.com/DixDev1621/Frontend-Blockchain.git" target="_blank" rel="noopener noreferrer">
                         <Github className="h-4 w-4 mr-2" />
-                        Source Code
+                        Frontend Repo
+                      </a>
+                    </Button>
+                    <Button size="sm" variant="outline" asChild>
+                      <a href="https://github.com/DixDev1621/Backend-Blockchain.git" target="_blank" rel="noopener noreferrer">
+                        <Github className="h-4 w-4 mr-2" />
+                        Backend Repo
                       </a>
                     </Button>
                   </div>
@@ -337,16 +346,19 @@ const Portfolio = () => {
               {/* Smart Waste Management System */}
               <Card className="hover:shadow-lg transition-shadow">
                 <CardHeader>
-                  <CardTitle>Smart Waste Management System</CardTitle>
+                  <div className="flex items-center gap-2 mb-1">
+                    <CardTitle>Smart Waste Management System</CardTitle>
+                  </div>
+                  <CardDescription className="text-xs font-medium text-primary">MERN Stack Backend + AI + IoT</CardDescription>
                   <div className="flex flex-wrap gap-1 mt-2">
-                    {["Node.js", "Express", "MongoDB", "Arduino", "IoT"].map((tech) => (
+                    {["MongoDB", "Express.js", "Node.js", "Arduino", "IoT"].map((tech) => (
                       <Badge key={tech} variant="secondary" className="text-xs">{tech}</Badge>
                     ))}
                   </div>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground mb-2">
-                    Developed an AI-based smart waste segregation system using computer vision, deep learning, and Arduino-controlled hardware to automatically classify and segregate waste in real time.
+                    Developed a hardware-integrated smart waste management system with a MERN stack backend to perform real-time waste classification and physical segregation. The system runs on a local server due to live camera input and direct Arduino control, and is deployable in campuses, offices, apartments, and public facilities. The modular design allows scalable installation of multiple units.
                   </p>
                   <p className="text-xs text-muted-foreground italic mb-4">Note: Local Server | Hardware-Based System</p>
                   <div className="flex gap-2">
@@ -372,7 +384,7 @@ const Portfolio = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Developed a water intake tracking web application that enables users to efficiently monitor and manage daily drinking water consumption.
+                    Developed a responsive water intake tracking web application using React.js and TypeScript with a modern UI built using Tailwind CSS. Integrated backend services via Supabase to store and manage user hydration data efficiently.
                   </p>
                   <div className="flex gap-2">
                     <Button size="sm" asChild>
@@ -406,22 +418,27 @@ const Portfolio = () => {
                 { 
                   title: "Smart India Hackathon 2025 – Winner", 
                   org: "National-level winner for Fog Magnet – Fog-to-Water Conversion Hardware",
-                  link: "/certificates/sih-2025-winner.jpeg"
+                  link: "https://drive.google.com/file/d/19Cz1rVB5uen9JHERTS-InOBfIMIbto5h/view?usp=sharing"
+                },
+                { 
+                  title: "1st Place – IEEE IMPACTX 3.0 National-Level 24-Hour Hackathon", 
+                  org: "Out of 517 teams, shortlisted among final 85",
+                  link: "https://drive.google.com/file/d/1ICDvzEMJ1REuMnSp-I34zRnziDcgqjAN/view?usp=sharing"
                 },
                 { 
                   title: "1st Place – Debate Competition", 
                   org: "Sai Ram Engineering College (Gridex 8.0)",
-                  link: "https://drive.google.com/file/d/1pvaC_BQVJmnAnvgLGDqRiQuf1k7dUSel/view?usp=sharing"
+                  link: "https://drive.google.com/file/d/1_I_zcO6wAYPTW4MHWg5KzeGF7qidsXT6/view?usp=sharing"
                 },
                 { 
                   title: "3rd Place – App Expo", 
                   org: "Theme: Crypto (Blockchain & DeFi)",
-                  link: "https://drive.google.com/file/d/16vmAAtCSbV-WOVuPv6PgWC9d_S8uaj3f/view?usp=sharing"
+                  link: "https://drive.google.com/file/d/1YJSk0ecai-VG9l-coHKFoLHo_0AGblIJ/view?usp=sharing"
                 },
                 { 
                   title: "Full Stack Web Development", 
                   org: "GUVI (6 months)",
-                  link: "https://drive.google.com/file/d/1ifwFc7oclS6tWlVuL0yIG_HigbbKs2dF/view?usp=sharing"
+                  link: "https://drive.google.com/file/d/1dvU4wxVH61lJWYThj0Dj1gw6B1F-_I1K/view?usp=sharing"
                 },
                 { 
                   title: "IEEE Publication", 
@@ -429,19 +446,19 @@ const Portfolio = () => {
                   link: "https://drive.google.com/file/d/12MdgrvNZTISbx9Z7NYp71BgSazGf7drz/view?usp=sharing"
                 },
                 { 
-                  title: "Hackathon - VIT Chennai", 
+                  title: "Hackathon – VIT Chennai", 
                   org: "Top 10 Finalist out of 180 teams",
-                  link: "https://drive.google.com/file/d/1su-vOUWW0d-7RFncIfaSOjeZqJxZ0lXy/view?usp=sharing"
+                  link: "https://drive.google.com/file/d/1poe54uoxa6hXYVoJdIsqsJBgvOhzk5_D/view?usp=sharing"
                 },
                 { 
-                  title: "DRESTEIN'25 Poster Presentation", 
+                  title: "DRESTEIN'25 – Poster Presentation", 
                   org: "3rd Place - Saveetha Engineering College",
-                  link: "https://drive.google.com/file/d/19KYMLq7Up5oNlmizTm0rBrgq_esWdQPo/view?usp=sharing"
+                  link: "https://drive.google.com/file/d/1yrPwHPJpZpA9Y7n0xJ1RgjWezNCocgzC/view?usp=sharing"
                 },
                 { 
-                  title: "2nd - Multiverse Pitch", 
+                  title: "2nd Place – Multiverse Pitch", 
                   org: "Sai Ram Engineering College (AIRO 5.0)",
-                  link: "https://drive.google.com/file/d/1q6zO7BALntY47nrObApTR3MlJ_r3cosw/view?usp=sharing"
+                  link: "https://drive.google.com/file/d/1915ko7RvEknHB7balQs_fux5tmXsekMy/view?usp=sharing"
                 }
               ].map((cert) => (
                 <Card key={cert.title}>
@@ -560,12 +577,9 @@ const Portfolio = () => {
                 <Github className="h-5 w-5" />
               </a>
             </div>
-            <Button size="sm" variant="outline" asChild>
-              <a href="/resume.pdf" download>
-                <Download className="h-4 w-4 mr-2" />
-                Download Resume
-              </a>
-            </Button>
+            <p className="text-muted-foreground text-sm">
+              Built with React & Tailwind CSS
+            </p>
           </div>
         </div>
       </footer>
